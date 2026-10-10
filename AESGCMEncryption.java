@@ -22,7 +22,7 @@ public class AESGCMEncryption {
         // 3. Create AES-GCM Cipher
         Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
 
-        // 4. Create GCM parameters using the nonce
+        // 4. Create GCM parameters using the nonce(128 is the size of authentication tag)
         GCMParameterSpec gcmParameterSpec =
                 new GCMParameterSpec(128, nonce);
 
